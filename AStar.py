@@ -51,7 +51,6 @@ def astar (mapMatrix, start, end):
         currentNode = open_list[0]
         print(currentNode.position, currentNode.parent, currentNode.h_djik, currentNode.h_greedy, currentNode.h_astar)
 
-        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
 
         if currentNode.position == end_node.position:
             path = []
@@ -66,7 +65,6 @@ def astar (mapMatrix, start, end):
         # check = open_list[0].h_greedy
         # print (check)
 
-        print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
 
         newPositions = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
         setPositions = set()
@@ -74,7 +72,6 @@ def astar (mapMatrix, start, end):
             setPositions.add((currentNode.position[0]+node_position[0],currentNode.position[1]+node_position[1]))
         #print(setPositions)
 
-        print("ccccccccccccccccccccccccccccccccccccc")
 
         setClosed = set()
         cList = list(map(lambda x: x.position, closed_list))
@@ -83,35 +80,29 @@ def astar (mapMatrix, start, end):
         setFinal = setPositions - setClosed
         #print(setFinal)
 
-        print("ddddddddddddddddddddddddddddd")
 
         oList = list(map(lambda x: x.position, open_list))
         setOpen = set ()
         setOpen = setOpen.union (set (oList))
         setFinal = setFinal - setOpen
 
-        print("eeeeeeeeeeeeeeeeeeeeeeeeeeeee")
 
         filter = []
         for node_position in setFinal:
-            print("ffffffffffffffffffffffffffff111111111")
             print (node_position[0], node_position[1], len(mapMatrix) - 1, len(mapMatrix[len(mapMatrix)-1])-1)
             if node_position[0] < 0 or node_position[1] < 0 or node_position[0] > (len(mapMatrix)) - 1 or node_position[1] > (len(mapMatrix[len(mapMatrix)-1])-1):
                 continue
 
-            print("ffffffffffffffffffffffffffff222222222")
 
             if mapMatrix[node_position[0]][node_position[1]] != 0:
                 continue
 
-            print("ffffffffffffffffffffffffffff3333333333")
 
             newNode = NodeClass(parent=currentNode, position=(node_position[0],node_position[1]))
             newNode.h_djik = currentNode.h_djik + 1
             newNode.h_greedy = (abs(newNode.position[0] - end_node.position[0]) + abs(newNode.position[1] - end_node.position[1]))
             newNode.h_astar = newNode.h_djik + newNode.h_greedy
 
-            print("gggggggggggggggggggggggggggggggggg")
 
             open_list.insert(0, newNode)
             #print(newNode.position, newNode.parent, newNode.h_djik, newNode.h_greedy, newNode.h_astar)
@@ -123,7 +114,6 @@ def astar (mapMatrix, start, end):
         closed_list.append(currentNode)
         open_list.remove(currentNode)
 
-        print("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
 
 
 if __name__ == "__main__":

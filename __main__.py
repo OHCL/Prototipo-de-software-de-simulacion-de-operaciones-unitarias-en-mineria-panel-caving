@@ -9,8 +9,6 @@ import itertools as it
 import numpy as np
 import matplotlib.pyplot as plt
 from AStar import *
-#from _GUnderground import Node
-
 
 d=0
 class Window(QMainWindow):
@@ -830,21 +828,6 @@ class LHD(object):
         #print(self.itinerary)
 
 
-class Node():
-    """A node class for A* Pathfinding"""
-
-    def __init__(self, parent=None, position=None, node_code=None):
-        self.parent = parent
-        self.position = position
-        self.code = node_code
-
-        self.g = 0
-        self.h = 0
-        self.f = 0
-
-
-    def __eq__(self, other):
-        return self.position == other.position
 
 
 class PuntoExtraccion(object):
