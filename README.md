@@ -5,14 +5,21 @@ Futuras modificaciones de este proyecto se harán en un branch privado en lugar 
 
 Funciones de la interface:
 File
+
 -Guardar: Guarda un archivo incluyendo los datos de túneles diseñados y simulación
+
 -Limpiar: Limpia el lienzo
 
 Brush size
+
 -1 px.: Cambia el pincel a un tamaño de 1 pixel
+
 -3 px.: Cambia el pincel a un tamaño de 3 pixeles.
+
 -5 px.: Cambia el pincel a un tamaño de 5 pixeles.
+
 -7 px.: Cambia el pincel a un tamaño de 7 pixeles.
+
 -9 px.: Cambia el pincel a un tamaño de 9 pixeles.
 
 Brush color
