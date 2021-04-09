@@ -6,11 +6,14 @@ Al ser un prototipo, este software fue hecho con el propósito de comprobar el c
 Futuras modificaciones de este proyecto se harán en un branch privado en lugar de ser expuestas al público.
 
 Funciones de la interface:
+
+
 File
 
 -Guardar: Guarda un archivo incluyendo los datos de túneles diseñados y simulación
 
 -Limpiar: Limpia el lienzo
+
 
 Brush size
 
@@ -24,6 +27,7 @@ Brush size
 
 -9 px.: Cambia el pincel a un tamaño de 9 pixeles.
 
+
 Brush color
 
 -Black: Cambia el pincel a un color negro. Representa túneles en el lienzo.
@@ -33,6 +37,7 @@ Brush color
 -Blue: Cambia el pincel a un color azul. Representa puntos de descarga en el lienzo.
 
 -White: Cambia el pincel a un color blanco. Permite borrar o separar túneles.
+
 
 Start Simulation
 
@@ -45,9 +50,11 @@ simulación
 
 -Revisar rutas: Permite observar un registro (en la consola de Python) de los vehículos y sus puntos de ciclo.
 
+
 Panel Builder
 
 -Teniente: Crea un modelo de malla teniente
+
 
 Charts (nota: los gráficos están vacíos hasta que se genera una simulación)
 
@@ -64,6 +71,7 @@ Charts (nota: los gráficos están vacíos hasta que se genera una simulación)
 -Puntos de extracción: Genera un gráfico de cuanto mineral es extraído en cada punto de extracción respecto al tiempo de simulación
 
 -Combustible: Genera un grafico con el consumo y carga de combustible de cada LHD respecto al tiempo de simulación.
+
 
 Config.
 
