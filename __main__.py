@@ -12,7 +12,6 @@ from AStar import *
 
 d=0
 class Window(QMainWindow):
-
     def __init__(self):
         super().__init__()
         self.setMouseTracking (True)

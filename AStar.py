@@ -97,7 +97,6 @@ def astar (mapMatrix, start, end):
             if mapMatrix[node_position[0]][node_position[1]] != 0:
                 continue
 
-
             newNode = NodeClass(parent=currentNode, position=(node_position[0],node_position[1]))
             newNode.h_djik = currentNode.h_djik + 1
             newNode.h_greedy = (abs(newNode.position[0] - end_node.position[0]) + abs(newNode.position[1] - end_node.position[1]))
