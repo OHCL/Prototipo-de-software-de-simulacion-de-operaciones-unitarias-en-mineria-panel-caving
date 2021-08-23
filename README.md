@@ -1,7 +1,7 @@
 # GopherUnderground
 Este software consiste en un prototipo de simulación para transporte de minerales en minería panel caving.
 
-Al ser un prototipo, este software fue hecho con el propósito de comprobar el concepto y su potencial. Como resultado, cumple con el proposito de ser un producto minimo viable del concept, pero tiene algunas falencias (requerimiento de la consola de Python para algunas funciones, implementación de la GUI puede ser algo engorrosa, y falta de opciones como la de exportar, guardar y diseñar mallas de paneles en lugar de usar una malla predefinida por el software).
+Al ser un prototipo, este software fue hecho con el propósito de comprobar el concepto y su potencial. Como resultado, cumple con el proposito de ser un producto minimo viable del concepto, pero tiene algunas falencias en cuanto a como deberia ser un programa definitivo (requerimiento de la consola de Python para algunas funciones, implementación de la GUI puede ser algo engorrosa, y falta de opciones como la de exportar, guardar y diseñar mallas de paneles en lugar de usar una malla predefinida por el software).
 
 Dada la magnitud de cambios necesarios, tanto en funcionalidad como en infraestructura, futuras modificaciones de este proyecto se harán en un branch privado.
 
