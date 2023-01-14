@@ -28,8 +28,8 @@ class Window(QMainWindow):
         width = 800
         height = 600
 
-        icon = "Gopher Underground.png"
-        self.setWindowTitle("Gopher Underground")
+        icon = "GopUnd.png"
+        self.setWindowTitle("GopUnd")
         self.setGeometry(top, left, width, height)
         self.setWindowIcon(QIcon(icon))
 
@@ -551,7 +551,7 @@ class Window(QMainWindow):
         self.drawing = False
 
     def CambioTiempo(self):
-        tSim, ok = QInputDialog.getInt (self, "Gopher Underground", "Tiempo de simulacion (minutos).\nMax: 1440:", 120, 0, 1440, 1)
+        tSim, ok = QInputDialog.getInt (self, "GopUnd", "Tiempo de simulacion (minutos).\nMax: 1440:", 120, 0, 1440, 1)
         if ok:
             self.tiempoSim = tSim
 
@@ -585,179 +585,179 @@ class Window(QMainWindow):
 
     def c_LHDMaxSpeed(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                          0, nLHD, 1)
         if ok:
             string = "Nuevo valor de Vel. Maxima (m/s):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 16, 1, 100, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 16, 1, 100, 1)
             self.LHDdict[sLHD].max_speed = new
 
     def c_LHDaccel(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                          0, nLHD, 1)
         if ok:
             string = "Nuevo valor de aceleracion (m/s):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 2, 1, 100, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 2, 1, 100, 1)
             self.LHDdict[sLHD].accel = new
 
     def c_LHDdesaccel(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de desaceleracion (m/s):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 2, 1, 100, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 2, 1, 100, 1)
             self.LHDdict[sLHD].desaccel = new
 
     def c_LHDcapacity(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de capacidad (tons.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 20, 1, 100, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 20, 1, 100, 1)
             self.LHDdict[sLHD].capacity = new
 
     def c_LHD_PEwaitTime(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de espera en puntos de extaccion (segs.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 20, 1, 500, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 20, 1, 500, 1)
             self.LHDdict[sLHD].PEwaitTime = new
 
     def c_LHD_PVwaitTime(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de espera en puntos de vaciado (segs.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 10, 1, 500, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 10, 1, 500, 1)
             self.LHDdict[sLHD].PVwaitTime = new
 
     def c_LHDFuelCap(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de capacidad de combustible (mts.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 3500, 1, 10000, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 3500, 1, 10000, 1)
             self.LHDdict[sLHD].FuelCap = new
 
     def c_LHDRefuelDistance(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de distancia para reabastecimiento de combustible (mts.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 200, 1, 10000, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 200, 1, 10000, 1)
             self.LHDdict[sLHD].refuelDistance = new
 
     def c_LHDRefuelWaitTime(self):
         nLHD = len (LHD._registry) - 1
-        sLHD, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el LHD: ", 0,
+        sLHD, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el LHD: ", 0,
                                         0, nLHD, 1)
         if ok:
             string = "Nuevo valor de tiempo de espera para reabastecimiento de combustible (segs.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 200, 1, 5000, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 200, 1, 5000, 1)
             self.LHDdict[sLHD].refuelWaitTime = new
 
 
     def c_PE_Material(self):
         nPE = len (PuntoExtraccion._registry) - 1
-        sPE, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el Punto de Extraccion: ", 0,
+        sPE, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el Punto de Extraccion: ", 0,
                                          0, nPE, 1)
         if ok:
             string = "Nuevo valor de material (tons.):"
-            new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 500, 1, 50000, 1)
+            new, ok = QInputDialog.getInt (self, "GopUnd", string, 500, 1, 50000, 1)
             self.PEdict[sPE].setMaterial(new)
 
     def c_PEcu_ore(self):
         nPE = len (PuntoExtraccion._registry) - 1
-        sPE, ok = QInputDialog.getInt (self, "Gopher Underground", "Seleccione el Punto de Extraccion: ", 0,
+        sPE, ok = QInputDialog.getInt (self, "GopUnd", "Seleccione el Punto de Extraccion: ", 0,
                                          0, nPE, 1)
         if ok:
             string = "Nuevo valor de ley de cobre (%):"
-            new, ok = QInputDialog.getDouble(self, "Gopher Underground", string, 0.5, 0, 100, 2)
+            new, ok = QInputDialog.getDouble(self, "GopUnd", string, 0.5, 0, 100, 2)
             self.PEdict[sPE].cu_ore = new
 
     def todosLHDs(self):
         items = ["Vel. maxima", "Aceleracion", "Desaceleracion", "Capacidad", "Tiempo de espera en puntos de extraccion",
                  "Tiempo de espera en puntos de vaciado", "Combustible (mts)", "Distancia de recarga de combustible",
                  "Tiempo de espera recarga de combustible"]
-        item, ok = QInputDialog.getItem (self, "Gopher Underground",
+        item, ok = QInputDialog.getItem (self, "GopUnd",
                                          "¿Que desea cambiar?:", items, 0, False)
         if ok:
             if item == items[0]:
                 string = "Nuevo valor de Vel. Maxima (m/s):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 16, 1, 100, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 16, 1, 100, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.max_speed = new
 
             if item == items[1]:
                 string = "Nuevo valor de aceleracion (m/s):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 2, 1, 100, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 2, 1, 100, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.accel = new
 
             if item == items[2]:
                 string = "Nuevo valor de desaceleracion (m/s):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 2, 1, 100, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 2, 1, 100, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.desaccel = new
 
             if item == items[3]:
                 string = "Nuevo valor de capacidad (tons.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 20, 1, 100, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 20, 1, 100, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.capacity = new
 
             if item == items[4]:
                 string = "Nuevo valor de espera en puntos de extaccion (segs.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 20, 1, 500, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 20, 1, 500, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.PEwaitTime = new
 
             if item == items[5]:
                 string = "Nuevo valor de espera en puntos de vaciado (segs.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 10, 1, 500, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 10, 1, 500, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.PVwaitTime = new
 
             if item == items[6]:
                 string = "Nuevo valor de capacidad de combustible (mts.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 3500, 1, 10000, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 3500, 1, 10000, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.FuelCap = new
 
             if item == items[7]:
                 string = "Nuevo valor de distancia para reabastecimiento de combustible (mts.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 200, 1, 10000, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 200, 1, 10000, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.refuelDistance = new
 
             if item == items[8]:
                 string = "Nuevo valor de tiempo de espera para reabastecimiento de combustible (mts.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 200, 1, 5000, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 200, 1, 5000, 1)
                 for LHDobject in LHD._registry:
                     LHDobject.refuelWaitTime = new
 
     def todosPE(self):
         items = ["Material", "Ley de cobre"]
-        item, ok = QInputDialog.getItem (self, "Gopher Underground",
+        item, ok = QInputDialog.getItem (self, "GopUnd",
                                          "¿Que desea cambiar?:", items, 0, False)
         if ok:
             if item == items[0]:
                 string = "Nuevo valor de material (tons.):"
-                new, ok = QInputDialog.getInt (self, "Gopher Underground", string, 500, 1, 50000, 1)
+                new, ok = QInputDialog.getInt (self, "GopUnd", string, 500, 1, 50000, 1)
                 for PEobject in PuntoExtraccion._registry:
                     PEobject.setMaterial (new)
 
             if item == items[1]:
                 string = "Nuevo valor de ley de cobre (%):"
-                new, ok = QInputDialog.getDouble (self, "Gopher Underground", string, 0.5, 0, 100, 2)
+                new, ok = QInputDialog.getDouble (self, "GopUnd", string, 0.5, 0, 100, 2)
                 for PEobject in PuntoExtraccion._registry:
                     PEobject.cu_ore = new
 
